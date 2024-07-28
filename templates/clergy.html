@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="icon" href="{% static 'assets/images/kericho.png' %}">
+  <script src="https://kit.fontawesome.com/f58d60dffb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'styles/universal.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/clergy.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/newmobile.css' %}">
+  <title>our clergy</title>
+</head>
+<body>
+  <header class="active-header">
+    <a href="{%url 'home' %}">
+      <img src="{% static 'assets/images/kericho.png' %}" alt="">
+    </a>
+    
+   <a href="{%url 'home' %}">
+    <div class="hashbar-container" >
+      <div class="hashbar"></div>
+      <div class="hashbar"></div>
+      <div class="hashbar"></div>
+    </div>
+   </a>
+  </header>
+
+  <section class="upper-section">
+    <div class="holder">
+      <h2>Leadership</h2>
+      <p>Home - Leadership
+      </p>
+    </div>
+  </section>
+
+  <section class="introd">
+    <div class="img-section">
+      <img src="{% static 'assets/images/bishop.jpg' %}" alt="right rev ernest ngeno" >
+      <div class="verse">
+          <h3> Luke 12:32</h3>
+          <p>
+            “Do not fear, little flock, for it is your Father’s good pleasure to give you the kingdom.
+          </p>
+      </div>
+    </div>
+
+    <div class="rando">
+      <h2>
+        Being The Good Shepherd
+      </h2>
+
+      <h3> 1 Peter 5:2-3</h3>
+        <p>
+          "Care for the flock that God has entrusted to you. Watch over it willingly, not grudgingly—not for what you will get out of it, but because you are eager to serve God. Don't lord it over the people assigned to your care, but lead them by your own good example".
+        </p>
+    </div>
+  </section>
+
+  <section class="sect">
+    <h1>DIOCESIAN CLERGY</h1>
+  </section>
+
+  <section class="clergy-grid">
+
+    {% for member in clergy %}
+    <div class="clergy-holder">
+      <img src ="{{member.Image.url}}"  alt="">
+      <h2>
+       {{member.Name}}
+      </h2>
+      <P>{{member.Tittle}} <a href="{%url member.url %}">{{member.Post}}</a>
+      </P>
+    </div>
+    {% endfor %}
+
+  </section>
+</body>
+</html>

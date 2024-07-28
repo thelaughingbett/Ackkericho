@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  {% load static %}
+  <link rel="icon" href="{% static 'assets/images/kericho.png' %}">
+  <script src="https://kit.fontawesome.com/f58d60dffb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'styles/universal.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/clergy.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/newmobile.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/gallery.css' %}">
+
+</head>
+<body>
+  <header class="active-header">
+    <a href="{%url 'home' %}">
+      <img src="{% static 'assets/images/kericho.png' %}" alt="">
+    </a>
+    
+   <a href="{%url 'home' %}">
+    <div class="hashbar-container" >
+      <div class="hashbar"></div>
+      <div class="hashbar"></div>
+      <div class="hashbar"></div>
+    </div>
+   </a>
+  </header>
+  <main>
+    <div class="image-grid">
+      {% for image in images  %}
+      <div class="image-holder">
+        <img src="{{image.Image.url}}" alt="">
+        <h2>
+          {{image.description}}
+        </h2>
+      </div>
+    {% endfor %}
+    </div>
+  </main>
+</body>
+</html>

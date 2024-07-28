@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <script src="https://kit.fontawesome.com/f58d60dffb.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="{% static 'assets/images/kericho.png' %}">
+  <link rel="stylesheet" href="{% static 'styles/universal.css' %}">
+  <link rel="stylesheet" href="{% static 'styles/events.css' %}">
+  <title>events</title>
+</head>
+<body>
+  <header class="active-header">
+    <a href="{% url 'home' %}">
+      <img src="{% static 'assets/images/kericho.png' %}" alt="">
+    </a>
+    
+    <a href="{% url 'home' %}">
+      <div class="hashbar-container" >
+        <div class="hashbar"></div>
+        <div class="hashbar"></div>
+        <div class="hashbar"></div>
+      </div>
+    </a>
+  </header>
+
+  <section class="upper-section">
+    <div class="holder">
+      <h2>EVENTS</h2>
+      <p><a href="{% url 'home' %}">Home</a> - events
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <div>
+      <table class="table">
+        <tr>
+          <td></td>
+          <td class="orgdept"> Event</td>
+          <td class="orgdept">ORGANISING DEPT</td>
+          <td class="orgdept">venue</td>
+        </tr>
+
+        {% for event in events  %}
+        <tr>
+          <td>
+            <!--div class="cal">
+              <span class="mon">
+                {{event.Date.month}}
+              </span>
+              <span class="day">
+                {{event.Date.day}}
+              </span>
+              <span class="year">
+                {{event.Date.year}}
+              </span>
+            </!--div-->
+          </td>
+          {% if event.Date >= today.date %}
+          <td>
+            <div class="event-holder">
+             <span class="date">
+               <i class="fa fa-calendar" aria-hidden="true"></i>
+               {{event.Date}}
+             </span>
+             <span class="event">
+               {{event.EventName}}
+             </span>
+             <span class="venue">
+               {{event.Venue}}
+             </span>
+            </div>
+           </td>
+           <td class="orgdept">
+             {{event.OrganisingDept}}
+           </td>
+           <td class="orgdept">
+             {{event.venue}}
+           </td>
+         </tr>
+          {% endif %}
+          
+        {% endfor %}
+
+      </table>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {% load static %}
+  <link rel="icon" type="image/png" href="{% static 'assets/images/kericho.png'%}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="{% static 'styles/universal.css'%}">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'styles/newinterface.css' %}">
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="{% static 'styles/newmobile.css'%}">
+  <script src="https://kit.fontawesome.com/f58d60dffb.js" crossorigin="anonymous"></script>
+  <script src="{% static 'scripts/universal.js' %}" defer></script>
+  
+  <title>ACK kericho Diocese</title>
+</head>
+<body>
+  <header class="active-header">
+    <img src="{% static 'assets/images/kericho.png' %}" alt="">
+    
+    <div class="hashbar-container" >
+      <div class="hashbar"></div>
+      <div class="hashbar"></div>
+      <div class="hashbar"></div>
+    </div>
+  </header>
+
+  <div class="context-menu">
+    <span class="x">&#88;</span>
+    <div class="context-items">
+      <a href="{% url 'cathedral' %}">
+        cathedral
+      </a>
+    </div>
+    <div class="context-items clickable">
+      <a href="#dept">
+        departments
+      </a>
+    </div>
+    <div class="context-items clickable">
+      <a href="https://www.adssouthrift.org/">
+        Missions
+      </a>
+    </div>
+    <div class="context-items clickable">
+      <a href="#arch">
+        Archdeaconaries
+      </a>
+    </div>
+    <div class="context-items clickable">
+      <a href="{% url 'clergy'%}">
+        Clergy
+      </a>
+    </div>
+    <div class="context-items clickable">
+     <a href="{% url 'events' %}">
+      Events
+     </a>
+    </div>
+    <div class="context-items clickable">
+      <a href="#facilities">
+        Facilities
+      </a>
+    </div>
+    <div class="context-items clickable">
+      <a href="{%  url 'gallery' %}">
+        Gallery
+      </a>
+    </div>
+    <div class="context-items clickable">
+      <a href="https://www.anglicancommunion.org/">
+        About Us
+      </a>
+    </div>
+  </div>
+
+  <main class="main">
+    <section>
+      <div class="carousel">
+        <div class="carousel-button" data-carousel = "prev">&#8656;</div>
+        <div class="carousel-button" data-carousel="next">&#8658;</div>
+        <div class="intro"  data-active>
+          <img src="{% static 'assets/images/random.jpg'%}" alt="">
+          <div class="background-dimmer">
+            <div class="background-words">
+              <h2>OUR VISION</h2>
+              <br>
+              <p>
+                Honour God , Serve People
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="intro">
+          <img src="{% static 'assets/images/random2.jpeg'%}" alt="">
+          <div class="background-dimmer">
+            <div class="background-words">
+              <h2>OUR MISSION</h2>
+              <br>
+              <p>
+                Transform Society through the local church ,creating believing and self-sustaining
+                communities where life happens
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="intro">
+          <img src="{% static 'assets/images/bible.jpg' %}" alt="">
+          <div class="background-dimmer">
+            <div class="background-words">
+              <h2>THEME OF THE YEAR</h2>
+              <br>
+              <p>
+                "Making the most of every of opportunity"
+                <br>
+                <span class="quoted-word">
+                  EPHESIANS 5:16a
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="events-hero">
+        <div class="exp">
+          <div class="highlight">
+            UPCOMING EVENT
+          </div>
+          <p>
+            <h2>{{upcoming.EventName}}
+            </h2>
+          </p>
+        </div>
+    
+        <div class="time">
+          <div class="events-head">
+            meet us at : {{upcoming.venue}} <br>
+            on {{upcoming.Date}}
+          </div>
+        </div>    
+      </div>
+
+      <div class="mid-container">
+        <div class="bishop-container">
+          <div class="bishop-pic">
+            <img src="{% static 'assets/images/bishop.jpg' %}" alt="right reverend ernest ngeno">
+          </div>
+          <div class="bishop-words">
+            <span class="mid-header"> FROM THE BISHOP</span>
+            <span class="bishop-wrds">
+              <br>
+              I greet you all in the Name of Jesus Christ thank God for this day and for the privilege to be a servant of God in His church. The Anglican Communion is a family of 42 autonomous and independent-yet-interdependent national, pan-national and regional churches in communion with the see of Canterbury.The diocese of Kericho being  adipisci perferendis suscipit nihil expedita laborum inventore sapiente alias reiciendis quos illo aut dolorum molestiae possimus. Itaque aliquam rem omnis aut quo quidem porro facere culpa, unde autem. Quasi alias magni aperiam totam!
+            </span>
+            <br>
+            <span class="bishop-name">
+              RT REV ERNEST NGENO
+              <br>
+              BISHOP OF THE DIOCESE OF KERICHO
+            </span>   
+          </div>
+        </div>
+      </div>
+
+      <div class="archdeaconaries-container" id="arch">
+        <p class="arch-title">OUR ARCHDEACONARIES</p>
+        <div class="arch-grid">
+          <div class="arch" data-aos="zoom-in">
+            <a href="{% url 'kericho' %}">
+              <img src="{% static 'assets/images/kericho.jpg' %}" alt="archdeaconary of kericho">
+            <div class="arch-name">
+              <input type="hidden" name="kericho" value="kericho">
+              <div class="arch-in">
+                Kericho
+              </div>
+            </div>
+            </a>
+          </div>
+      
+          <div class="arch" data-aos="zoom-in">
+            <a href="{% url 'sotik' %}">
+              <img src="{% static 'assets/images/sotik.jpg' %}" alt="archdeaconary of kericho">
+              <div class="arch-name">
+                <input type="hidden" name="Sotik" value="Sotik">
+                <div class="arch-in">
+                  Sotik
+                </div>
+              </div>
+            </a>
+          </div>
+      
+          <div class="arch" data-aos="zoom-in">
+            <a href="{% url 'narok' %}">
+              <img src="{% static 'assets/images/narok.jpg' %}" alt="archdeaconary of kericho">
+            <div class="arch-name">
+              <form action="" method="POST">
+                <input type="hidden" name="Narok" value="Narok">
+              </form>
+              <div class="arch-in">
+                Narok
+              </div>
+            </div>
+            </a>
+          </div>
+      
+          <div class="arch" data-aos="zoom-in">
+            <a href="{% url 'transmara' %}">
+              <img src="{% static 'assets/images/kericho.jpg' %}" alt="archdeaconary of kericho">
+            <div class="arch-name">
+              <input type="hidden" name="Transmara" value="Transmara">
+              <div class="arch-in">
+               Transmara
+              </div>
+            </div>
+            </a>
+          </div>     
+          
+        </div>
+      </div>
+
+
+      <div class="verse-of">
+        <img src="{% static 'assets/images/home-10.webp' %}" alt="">
+        <div class="background-dimmer">
+          <div class="background-words">
+            <h2>verse of the day</h2>
+            <br>
+            <p>
+              "Before I formed you in the womb I knew you, before you were born I set you apart."
+              <br>
+              <span class="quoted-word">
+                Jeremiah 1:5
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      
+      <section class="short">
+        <h2>Our foundational Beliefs </h2>
+        <ul>
+          <li><a href="https://www.anglicancommunion.org/theology/doctrine/foundations.aspx">
+            Scriptures
+          </a></li>
+          <li><a href="https://www.anglicancommunion.org/theology/doctrine/foundations.aspx">
+            Ancient Creeds
+          </a></li>
+          <li><a href="https://www.anglicancommunion.org/theology/doctrine/foundations.aspx">
+            Distinctive ways of worship
+          </a></li>
+        </ul>
+      </section>
+  
+
+      <div class="thissection" id="dept">
+        <div class="section-words">
+          our departments
+          <br>
+          purpose for all ages
+        </div>
+        <div class="dept-holder">
+          <div class="dept-grid">
+            <div class="dept-container">
+              <img src="{% static 'assets/images/kama-steal.jpg' %}" alt="">
+              <div class="overlay-dept">
+                <img src="{% static 'assets/images/KAMA.png' %}" alt="">
+                 <a href="{% url 'kama' %}">
+                  <div class="overlay">
+                    KAMA
+                   </div>
+                 </a>
+              </div>
+            </div>
+
+            <div class="dept-container">
+              <img src="{% static 'assets/images/MU.jpg' %}" alt="">
+              <div class="overlay-dept">
+                <img src="{% static 'assets/images/MU.png' %}" alt="">
+                <a href="{% url 'mu' %}">
+                  <div class="overlay">
+                    MU
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="dept-container">
+              <img src="{% static 'assets/images/youths.jpg' %}" alt="">
+              <a href="{% url 'kayo' %}">
+                <div class="overlay-dept">
+                  <img src="{% static 'assets/images/kayo.png' %}" alt="">
+                  <a href="{% url 'kayo' %}">
+                    <div class="overlay">
+                      KAYO
+                    </div>
+                  </a>
+                </div>
+              </a>
+            </div>
+
+            <div class="dept-container">
+              <img src="{% static 'assets/images/sundayschool.avif' %}" alt="">
+             <a href="{% url 'sschool' %}">
+              <div class="overlay-dept">
+                <img src="{% static 'assets/images/sundayschool.jpg' %}" alt="">
+               <div class="overlay">
+                SUNDAY SCHOOL
+               </div>
+              </div>
+             </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <div class="faq-holder" id="faq">
+      <div class="left-faq">
+        <h2>faq</h2>
+        <span>Find out what to expect</span>
+        <p>Learn more about our values and our story as a church by visiting the about us page.</p>
+        <a href="https://www.anglicancommunion.org">
+          <button>
+            ABOUT US
+          </button>
+        </a>
+      </div>
+
+      <div class="right-faq">
+        <ul class="jsRightFaq">
+          <li>What is a church?
+            <p>Ephesians 5:1 refers to the church as "the body of Christ" that God cares for and nourishes as he does himself. 
+              <br>
+            1 Corinthians 12:13 says, "by one Spirit we are all baptized into one body," which shows that the church is a physical manifestation of Christ.
+            <br>
+            2 Corinthians 11:2, Ephesians 5:32, Revelation 19:7, and Revelation 21:9 all refer to the church as the bride of Christ, suggesting a sacred family relationship between Christ and the church. 
+            </p>
+          </li>
+          <li>What happens in a church service?
+            <p>
+              A typical church service may include elements such as singing hymns or worship songs, prayers, readings from the Bible, a sermon or message delivered by a pastor or minister, and sometimes communion (the sharing of bread and wine, representing the body and blood of Jesus Christ).
+            </p>
+          </li>
+          <li>Who leads a church service?
+            <p>
+              A church service is typically led by a pastor, priest, minister, or other religious leader.
+            </p>
+          </li>
+          <li>What denominations of Christianity have churches?
+            <p>
+              There are many denominations within Christianity, each with its own beliefs and practices. Some common denominations include Catholic, Protestant (which includes various branches like Anglican,Baptist, Methodist, Lutheran, Presbyterian, etc.), and Eastern Orthodox.
+            </p>
+          </li>
+          <li>What is the purpose of a church?
+            <p>The church is a representative of jesus on earth
+            </p>
+           <p>
+            Colossians 3:16 - Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord.</p>
+
+            <p>Matthew 28:19-20 - Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:   </p>
+            
+           <p> 1 Peter 2:9-10 - But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light
+           </p>
+          </li>
+          <li>Can anyone attend a church service?
+            <p>
+              Yes, most churches welcome visitors and newcomers to attend their services regardless of their religious background.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="discover" id="facilities">
+      <h2>Discover More</h2>
+      <div class="discover-more">
+        <div class="discover-holders">
+          <a href="https://www.adssouthrift.org/">
+            <img src="{% static 'assets/images/ads-kenya.webp' %}" alt="">
+            <span>ads</span>
+          </a>
+        </div>
+        <div class="discover-holders">
+          <a href="{% url 'schools' %}">
+            <img src="{% static 'assets/images/holy-trinity-academy.jpg' %}" alt="">
+            <span>ackkcodioc schools</span>
+          </a>
+        </div>
+        <div class="discover-holders">
+         <a href="https://maraempiris.org/">
+          <img src="{% static 'assets/images/auditorium.webp' %}" alt="">
+          <span>ackkcodioc facilities</span>
+         </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="{% static 'assets/images/rev.jpg' %}" alt="">
+    <div class="overlay-footer">
+      <div class="footer-holder">
+        <div class="footer-container" id="about-us">
+          <h2>About Us</h2>
+          <p>
+            The Anglican Communion is a family of 42 autonomous and independent-yet-interdependent national, pan-national and regional churches in communion with the see of Canterbury.
+          </p>
+          <a href="https://www.anglicancommunion.org">
+            <button>
+              LEARN MORE
+            </button>
+          </a>
+        </div>
+        <div class="footer-container">
+          <h2>
+            Find us
+          </h2>
+          <ul>
+            <li>
+              <a href="tel:+254 717 267 442">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              +254 717 267 442
+              </a>
+            </li>
+            <li>
+              <a href="mailto:ackkcodioc@gmail.com">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+               ackkcodioc@gmail.com
+              </a>
+            </li>
+            <li>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              Kericho,kenya
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container" id="socials">
+          <h2>
+            Connect with us
+          </h2>
+          <ul>
+            <li>
+              <i class="fa fa-instagram" aria-hidden="true"> ackKericho</i>
+            </li>
+            <li>
+              <i class="fa fa-twitter" aria-hidden="true">
+                ackKericho
+              </i>
+            </li>
+            <li>
+              <i class="fa fa-facebook-official" aria-hidden="true"> 
+              <a href=" https://www.facebook.com/ackkcodioc">
+                ackkcodioc
+              </a></i>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="last">
+        &copy; 2024  ACK
+         DIOCESES OF KERICHO &#10073;
+         all rights reserved
+      </div>
+    </div>
+  </footer>
+  
+
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init(
+      {
+        duration: 3000,
+        mirror: true
+      }     
+    );
+  </script>
+  <script src="{% static 'scripts/main.js'%}">
+
+  
+  </script>
+</body>
+</html>
