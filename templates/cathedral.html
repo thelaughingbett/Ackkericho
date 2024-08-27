@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% extends "main.html" %}
+  {% block main %}
+    
+  
   {% load static %}
-  <link rel="icon" href="{% static 'assets/images/kericho.png' %}">
-  <link rel="stylesheet" href="{% static 'styles/universal.css' %}">
   <link rel="stylesheet" href="{% static 'styles/cathedral.css' %}">
   <link rel="stylesheet" href="{% static 'styles/newmobile.css' %}">
   <script src="https://kit.fontawesome.com/f58d60dffb.js" crossorigin="anonymous"></script>
@@ -167,78 +164,9 @@
       </div>
     </div>
 
-    <div class="verse-of">
-      <img src="{% static 'assets/images/home-10.webp' %}" alt="">
-      <div class="background-dimmer">
-        <div class="background-words">
-          <h2>verse of the day</h2>
-          <br>
-          <p>
-            "Before I formed you in the womb I knew you, before you were born I set you apart."
-            <br>
-            <span class="quoted-word">
-              Jeremiah 1:5
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
+      {% include "verse.html" %}
 
-    <div class="faq-holder" id="faq">
-      <div class="left-faq">
-        <h2>faq</h2>
-        <span>Find out what to expect</span>
-        <p>Learn more about our values and our story as a church by visiting the about us page.</p>
-        <a href="https://www.anglicancommunion.org">
-          <button>
-            ABOUT US
-          </button>
-        </a>
-      </div>
-
-      <div class="right-faq">
-        <ul class="jsRightFaq">
-          <li>What is a church?
-            <p>Ephesians 5:1 refers to the church as "the body of Christ" that God cares for and nourishes as he does himself.
-            <br> 1 Corinthians 12:13 says, "by one Spirit we are all baptized into one body," which shows that the church is a physical manifestation of Christ.
-            <br>
-            2 Corinthians 11:2, Ephesians 5:32, Revelation 19:7, and Revelation 21:9 all refer to the church as the bride of Christ, suggesting a sacred family relationship between Christ and the church. 
-            </p>
-          </li>
-          <li>What happens in a church service?
-            <p>
-              A typical church service may include elements such as singing hymns or worship songs, prayers, readings from the Bible, a sermon or message delivered by a pastor or minister, and sometimes communion (the sharing of bread and wine, representing the body and blood of Jesus Christ).
-            </p>
-          </li>
-          <li>Who leads a church service?
-            <p>
-              A church service is typically led by a pastor, priest, minister, or other religious leader.
-            </p>
-          </li>
-          <li>What denominations of Christianity have churches?
-            <p>
-              There are many denominations within Christianity, each with its own beliefs and practices. Some common denominations include Catholic, Protestant (which includes various branches like Anglican,Baptist, Methodist, Lutheran, Presbyterian, etc.), and Eastern Orthodox.
-            </p>
-          </li>
-          <li>What is the purpose of a church?
-            <p>The church is a representative of jesus on earth
-            </p>
-           <p>
-            Colossians 3:16 - Let the word of Christ dwell in you richly in all wisdom; teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord.</p>
-
-            <p>Matthew 28:19-20 - Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:   </p>
-            
-           <p> 1 Peter 2:9-10 - But ye are a chosen generation, a royal priesthood, an holy nation, a peculiar people; that ye should shew forth the praises of him who hath called you out of darkness into his marvellous light
-           </p>
-          </li>
-          <li>Can anyone attend a church service?
-            <p>
-              Yes, most churches welcome visitors and newcomers to attend their services regardless of their religious background.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
+      {% include "newtochurch.html" %}
 
     <div class="map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1275.255946334102!2d35.2860388312449!3d-0.3711818020779313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182a57112e54b3e9%3A0x5e1ce8e94163a122!2sACK%20New%20Holy%20Trinity%20Cathedral!5e0!3m2!1sen!2ske!4v1717960553550!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -293,7 +221,6 @@
        all rights reserved
     </div>
   </footer>
-
   <script >
     const hashbar = document.querySelector('.hashbar-container')
     const contextMenu = document.querySelector('.hero')
@@ -320,5 +247,6 @@
     }
 
   </script>
+  <script src="{% static 'scripts/verses.js' %}"></script>
 </body>
-</html>
+{% endblock main %}

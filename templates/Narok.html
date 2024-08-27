@@ -1,88 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'styles/universal.css' %}">
-  <link rel="stylesheet" href="{% static 'styles/archdeaconaries.css' %}">
-  <link rel="stylesheet" href="{% static 'styles/newmobile.css' %}">
-  <link rel="icon" type="image/png" href="{% static 'assets/images/kericho.png' %}">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <script src="https://kit.fontawesome.com/f58d60dffb.js" crossorigin="anonymous"></script>
-  <title>Archdeaconary Of {{name}}</title>
-</head>
-<body>
-  <header>
-    <a href="{% url 'home' %}">
-      <img src="{% static 'assets/images/kericho.png' %}" alt="">
-      ARCHDEACONARY OF {{name}}
-    </a>
-    <div class="more">
-      <ul class="js-ul">
-        <li>
-          <a href="{% url 'home' %}">
-            Home
-          </a>
-        </li>
-        <li><a href="#parishes">
-          Parishes
-        </a></li>
-      </ul>
-      <div class="hashbar-container" >
-        <div class="hashbar"></div>
-        <div class="hashbar"></div>
-        <div class="hashbar"></div>
-      </div>
-    </div>
-  </header>
+   {% extends "archmain.html" %}
+   {% block arch %}
+   {% load static %}
+      <section class="messag">
+        <img src="{% static 'assets/images/profile.jpg' %}" alt="">
+        <div class="themessage">
+          <h2>Gather in Community</h2>
+          <p>
+            Founded in 1976, The Archdeaconary of sotik  was first organized to serve the pepole of sotik and kilgoris ( now part of the Archdeaconary of transmara ), it now serves the parishes of : Manaret, Sotik, Bureti ,Saruchat and Bomet.it currently has a 21 clergy membership,15 layreaders and 6 ordained reverends 5 of whom serve the parshes and one under the chaplainacy of moi minaret,
+            <br>
+            <br>
+            we invite you to fellowship with us at any one of our parishes and know that you will feel blessed
+          </p>
 
-  <body>
-    <section class="archdeacons-message">
-      <div class="message">
-        <span>THE CHURCH IS NOT A BUILDING</span>
-        <h2>The church is the people of God within the world being agents of hope</h2>
-        <p>
-          This vibrant community of action takers and careful stewards of a historic facility are listening to the call of the Spirit and our community and looking for authentic, engaging, progressive, caring, rooted, and justice-seeking ways of being the church in the time of great upheaval.
-        </p>
-      </div>
-      <img src="{% static 'assets/images/home-1.webp' %}" alt="">
-    </section>
+          <span> VEN Samuel Naikumi
+            <br>
+            Archdeacon of {{name}}
+          </span>
+        </div>
+      </section>
+   {% endblock arch %}
 
-    <section class="messag">
-      <img src="{% static 'assets/images/profile.jpg' %}" alt="">
-      <div class="themessage">
-        <h2>Gather in Community</h2>
-        <p>
-          Founded in 1976, The Archdeaconary of sotik  was first organized to serve the pepole of sotik and kilgoris ( now part of the Archdeaconary of transmara ), it now serves the parishes of : Manaret, Sotik, Bureti ,Saruchat and Bomet.it currently has a 21 clergy membership,15 layreaders and 6 ordained reverends 5 of whom serve the parshes and one under the chaplainacy of moi minaret,
-          <br>
-          <br>
-          we invite you to fellowship with us at any one of our parishes and know that you will feel blessed
-         </p>
-
-         <span> VEN Samuel Naikumi
-          <br>
-          Archdeacon of {{name}}
-         </span>
-      </div>
-    </section>
-
-    <section class="short">
-      <h2>Our foundational Beliefs </h2>
-      <ul>
-        <li><a href="https://www.anglicancommunion.org/theology/doctrine/foundations.aspx">
-          Scriptures
-        </a></li>
-        <li><a href="https://www.anglicancommunion.org/theology/doctrine/foundations.aspx">
-          Ancient Creeds
-        </a></li>
-        <li><a href="https://www.anglicancommunion.org/theology/doctrine/foundations.aspx">
-          Distinctive ways of worship
-        </a></li>
-      </ul>
-    </section>
-
-    <section class="parishes" id="parishes">
+   {% block archdeaconaries %}
+     {% load static %}
+     <section class="parishes" id="parishes">
       <h2>PARISHES</h2>
       <div class="parish-holder">
         <div class="parish">
@@ -114,32 +54,5 @@
         </div>
       </div>
     </section>
-
-    <section class="final">
-      <img src="{% static 'assets/images/image.jpeg' %}" alt="">
-      <div class="more-p">
-        <p>
-          "Neither death, nor life, nor angels, nor rulers, nor things present, nor things to come, nor powers, nor height, nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord."
-        </p>
-        <span>
-          ROMANS 8: 38-39
-        </span>
-      </div>
-    </section>
-  </body>
-
-  <script>
-    document.querySelector('.hashbar-container').onclick = () =>{
-      document.querySelector('.js-ul').toggleAttribute('data-active')
-    }
-
-    const parish =[...document.querySelectorAll('.js-h2')]
-    parish.forEach( parish =>{
-      parish.addEventListener('click' , ()=>{
-        const parishHolder = parish.closest('.parish')        
-        parishHolder.querySelector('p').toggleAttribute('data-active')
-      })
-    })
-  </script>
-</body>
-</html>
+   {% endblock archdeaconaries %}
+    

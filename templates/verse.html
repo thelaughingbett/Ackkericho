@@ -1,0 +1,20 @@
+
+{% load static %}
+
+<div class="verse-of">
+  <img src="{% static 'assets/images/home-10.webp' %}" alt="">
+  <div class="background-dimmer">
+    <input type="hidden" value="{{todaysdate.date}}" class="verseOfInput">
+    <div class="background-words">
+      <h2>verse of the day</h2>
+      <br>
+      <p>
+        "Before I formed you in the womb I knew you, before you were born I set you apart."
+        <br>
+        <span class="quoted-word">
+          Jeremiah 1:5
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

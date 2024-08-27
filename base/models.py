@@ -31,3 +31,10 @@ class Gallery(models.Model):
   
   def __str__(self):
     return self.description
+  
+# class Verse(models.Model):
+#   Verse = models.CharField(max_length=200,null=False)
+#   cont = models.CharField(max_length=200, null=False)
+  
+#   def __str__(self):
+#     return self.Verse
