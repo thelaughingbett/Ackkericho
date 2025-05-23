@@ -1,0 +1,3 @@
+djdjango
+pillow
+python-decouple
