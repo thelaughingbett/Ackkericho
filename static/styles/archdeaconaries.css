@@ -1,72 +1,72 @@
-header{
+header {
   display: flex;
   justify-content: space-between;
   width: 100vw;
-  padding: 7PX 40PX 7PX 40px;
+  padding: 7px 40px 7px 40px;
   position: fixed;
   background-color: aliceblue;
   z-index: 1000;
 }
 
-header a{
+header a {
   display: flex;
   align-items: center;
   color: #222222;
 }
 
-header img{
+header img {
   height: 97px;
 }
 
-header ul{
+header ul {
   height: 97px;
   display: flex;
   gap: 23px;
   align-items: center;
   cursor: pointer;
-
 }
 
-.archdeacons-message{
+.archdeacons-message {
   display: flex;
-  background-color: #5C2228;
+  background-color: #5c2228;
   color: #222222;
   padding: 130px 70px;
   align-items: center;
 }
 
-.archdeacons-message img{
+.archdeacons-message img {
   width: 700px;
   margin-top: 34px;
 }
 
-.message{
+.message {
   height: 87vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 40px 60px;
   gap: 45px;
   font-size: 2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.message span{
+.message span {
   font-size: 14px;
 }
 
-.message h2{
+.message h2 {
   font-size: 62px;
 }
 
-.message p{
+.message p {
   font-size: 18px;
   width: 400px;
   justify-self: flex-end;
 }
 
-.messag{
+.messag {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,14 +74,13 @@ header ul{
   gap: 50px;
 }
 
-.messag img{
+.messag img {
   width: 500px;
   position: relative;
   top: -43px;
-  
 }
 
-.themessage{
+.themessage {
   display: flex;
   flex-direction: column;
   width: 47vw;
@@ -89,18 +88,17 @@ header ul{
   gap: 43px;
 }
 
-.themessage h2{
+.themessage h2 {
   font-size: 62px;
   font-weight: 300;
 }
 
-.themessage p{
+.themessage p {
   font-size: 18px;
   color: rgba(49, 47, 47, 0.674);
 }
 
-
-.parishes{
+.parishes {
   background-color: aliceblue;
   display: flex;
   flex-direction: column;
@@ -110,43 +108,43 @@ header ul{
   padding-bottom: 43px;
 }
 
-.parishes > h2{
+.parishes > h2 {
   font-size: 63px;
   font-weight: 300;
 }
 
-.parish{
+.parish {
   width: 67vw;
   padding-top: 12px;
   padding-bottom: 23px;
-  border-bottom: 1px solid  rgba(49, 47, 47, 0.674);
+  border-bottom: 1px solid rgba(49, 47, 47, 0.674);
   transition: all ease 300ms;
 }
 
-.parish h2{
+.parish h2 {
   font-size: 45px;
   cursor: pointer;
 }
 
-.parish p{
+.parish p {
   margin-top: 23px;
   display: none;
 }
 
-.parish p[data-active]{
+.parish p[data-active] {
   display: block;
 }
 
-.final{
+.final {
   display: flex;
 }
 
-.final img{
+.final img {
   width: 900px;
 }
 
-.more-p{
-  background-color: #5C2228;
+.more-p {
+  background-color: #5c2228;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -154,31 +152,34 @@ header ul{
   align-items: center;
 }
 
-.more-p p{
+.more-p p {
   width: 34vw;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 45px;
 }
 
-.more-p span{
+.more-p span {
   font-size: 23px;
 }
 
-@media(max-width:772px){
+@media (max-width: 772px) {
+  .message {
+    align-items: flex-start;
+  }
 
-  .hashbar-container{
+  .hashbar-container {
     padding: 20px 12px;
   }
 
-  header{
+  header {
     padding: 10px 2px;
   }
 
-  header a{
-    font-size: .6rem;
+  header a {
+    font-size: 0.6rem;
   }
 
-  header ul{
+  header ul {
     position: absolute;
     top: 0;
     width: 100vw;
@@ -190,33 +191,33 @@ header ul{
     transition: all ease 400ms;
   }
 
-  header ul a{
+  header ul a {
     font-size: 1rem;
   }
 
-  header ul[data-active]{
+  header ul[data-active] {
     opacity: 1;
     top: 100px;
   }
-  
-  .parishes h2{
+
+  .parishes h2 {
     font-size: 1rem;
   }
 
-  .parish p{
-    font-size: .9rem;
+  .parish p {
+    font-size: 0.9rem;
   }
 
-  .final{
+  .final {
     flex-wrap: wrap-reverse;
   }
 
-  .more-p{
+  .more-p {
     gap: 12px;
     padding: 34px 12px;
   }
 
-  .more-p p{
+  .more-p p {
     width: 98vw;
     font-size: 2rem;
   }

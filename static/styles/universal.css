@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   list-style: none;
   padding: 0;
@@ -6,35 +6,35 @@
   text-decoration: none;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   width: 0px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-.hashbar-container{
+.hashbar-container {
   display: none;
 }
 
-.hashbar{
-  width:37px;
+.hashbar {
+  width: 37px;
   height: 5px;
   background-color: gray;
   margin: 10px;
 }
 
-.verse-of{
+.verse-of {
   width: 100vw;
   position: relative;
   z-index: -4;
 }
 
-.verse-of img{
+.verse-of img {
   width: 100%;
 }
-.background-dimmer{
+.background-dimmer {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -46,99 +46,98 @@ a{
   color: white;
 }
 
-.background-dimmer  h2{
+.background-dimmer h2 {
   font-size: 3rem;
 }
 
-.background-dimmer p{
-   font-size: 2rem;
+.background-dimmer p {
+  font-size: 2rem;
 }
 
-.background-words{
+.background-words {
   width: 54vw;
 }
 
-.faq-holder{
-  background-color: #4C6F67;
+.faq-holder {
+  background-color: #4c6f67;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.left-faq{
+.left-faq {
   display: flex;
   flex-direction: column;
   gap: 13px;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
   height: 100%;
   padding: 7px 40px;
 }
 
-.left-faq h2{
+.left-faq h2 {
   text-transform: uppercase;
   font-size: 62px;
   justify-self: start;
 }
 
-.left-faq span{
+.left-faq span {
   font-size: 24px;
 }
 
-.left-faq p{
+.left-faq p {
   margin-top: 64px;
   margin-bottom: 23px;
   font-size: 18px;
 }
 
-.left-faq button{
+.left-faq button {
   width: 200px;
   height: 47px;
-  background-color: #F1B253;
+  background-color: #f1b253;
   border: none;
   outline: none;
-  color: #22254D;
+  color: #22254d;
   transition: all ease 300ms;
 }
 
-.left-faq button:hover{
-  background-color: #22254D;
-  color: #FFFFFF;
+.left-faq button:hover {
+  background-color: #22254d;
+  color: #ffffff;
 }
 
-.right-faq{
+.right-faq {
   width: 60vw;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 40px;
   font-size: 28px;
 }
 
-.right-faq ul li{
-  border-bottom: 1px solid #FFFFFF;
+.right-faq ul li {
+  border-bottom: 1px solid #ffffff;
   margin-bottom: 12px;
   padding: 34px 0;
   cursor: pointer;
 }
 
-.right-faq ul li p{
+.right-faq ul li p {
   font-size: 18px;
   margin-bottom: 23px;
   margin-top: 23px;
   display: none;
 }
 
-.right-faq ul li p[data-active]{
+.right-faq ul li p[data-active] {
   display: block;
 }
 
-.last{
+.last {
   position: relative;
   bottom: 7px;
 }
 
-
-.short{
-  display:  flex;
+.short {
+  display: flex;
   width: 100vw;
   flex-direction: column;
   align-items: center;
@@ -146,74 +145,84 @@ a{
   padding: 45px 12px;
 }
 
-.short h2{
+.short h2 {
   font-size: 56px;
 }
 
-.short ul{
+.short ul {
   display: flex;
   justify-content: space-around;
   font-size: 23px;
   gap: 45px;
 }
 
-.short a{
+.short a {
   color: rgba(49, 47, 47, 0.674);
 }
 
-.short li{
+.short li {
   border-right: 1px solid rgba(49, 47, 47, 0.674);
   padding-right: 23px;
 }
 
-.dept-coordinator{
+.dept-coordinator {
   display: flex;
-  align-items:center ;
+  align-items: center;
   justify-content: center;
   padding: 105px;
 }
 
-.info-dept-cord{
-  padding-right:200px ;
+.info-dept-cord {
+  padding-right: 200px;
   text-transform: capitalize;
 }
 
-.info-dept-cord h2{
+.info-dept-cord h2 {
   font-size: 54px;
   font-weight: 100;
 }
 
-.info-dept-cord h3{
+.info-dept-cord h3 {
   font-size: 24px;
   font-weight: 200;
 }
 
-.cord-img{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 45px;
-   border-left: 1px solid #22254D ;
+.cord-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  border-left: 1px solid #22254d;
 }
 
-.cord-img img{
+.cord-img img {
   width: 370px;
   height: 370px;
   border-radius: 50%;
 }
 
-@media(max-width:772px){
-  .dept-coordinator{
+@media (max-width: 1024px) {
+  .dept-coordinator {
     flex-direction: column-reverse;
     align-items: center;
     padding: 45px 23px;
   }
 
-  .info-dept-cord{
+  .info-dept-cord {
     padding: 45px 24px;
   }
 
-  .cord-img{
+  .cord-img {
     border: none;
+  }
+
+  .faq-holder {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 820px) {
+  .faq-holder {
+    flex-direction: column;
   }
 }

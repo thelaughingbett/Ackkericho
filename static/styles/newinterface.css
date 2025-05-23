@@ -1,16 +1,16 @@
-body{
+body {
   display: block;
 }
 
-body[data-menu]{
+body[data-menu] {
   overflow-y: hidden;
 }
 
-body section{
+body section {
   display: block;
 }
 
-header{
+header {
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -18,40 +18,40 @@ header{
   right: 0;
   left: 0;
   width: 100vw;
-  align-items:center;
-  padding: 7px 3% ;
+  align-items: center;
+  padding: 7px 3%;
   z-index: 18;
   transition: all 300ms ease-in;
 }
 
-.active-header{
+.active-header {
   background-color: #353333;
   transition: all 700ms ease-in;
 }
 
-header > img{
+header > img {
   width: 90px;
 }
 
-.hashbar-container{
+.hashbar-container {
   display: block;
 }
 
-.hashbar{
-  width:37px;
+.hashbar {
+  width: 37px;
   height: 5px;
   background-color: gray;
   margin: 10px;
 }
 
-.context-menu{
+.context-menu {
   width: 23vw;
   min-height: 100vh;
   position: fixed;
   right: 0;
   display: flex;
   flex-direction: column;
-  margin: 0 ;
+  margin: 0;
   padding: 58px 12px 12px 12px;
   border: 1px solid;
   background-color: aliceblue;
@@ -62,34 +62,35 @@ header > img{
   z-index: 1000;
 }
 
-.context-menu a{
+.context-menu a {
   color: black;
 }
 
-.context-menu[data-active]{
+.context-menu[data-active] {
   transform: translateX(0);
   opacity: 1;
   overflow-y: scroll;
 }
 
-.context-items{
+.context-items {
   display: block;
   flex-direction: column;
   gap: 23px;
   align-items: center;
   min-height: 35px;
-  padding:  10px 3%;
-  text-align:start;
+  padding: 10px 3%;
+  text-align: start;
   font-size: 2em;
 }
 
-.x{
+.x {
   position: absolute;
   top: 28px;
   right: 32px;
   width: 30px;
   height: 30px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,58 +98,55 @@ header > img{
   cursor: pointer;
 }
 
-.extra{
+.extra {
   opacity: 0;
   height: 0;
   transform: scale(0);
-  transition: all ease 900ms,height  ease-in 2s ;
+  transition: all ease 900ms, height ease-in 2s;
   padding: 10px 7px 0px 7px;
 }
 
-.extra[data-active = 'true']{
+.extra[data-active="true"] {
   transform: scale(1);
   height: inherit;
   opacity: 1;
 }
 
-.added-context{
+.added-context {
   font-weight: 100;
   transform: rotate(45deg);
-  font-size: 22px;  
+  font-size: 22px;
   cursor: pointer;
   align-self: flex-end;
-
 }
 
-.carousel{
+.carousel {
   position: relative;
   left: 0;
-  top: 0;
+  top: 0;  
   width: 100vw;
   height: 100vh;
 }
 
-.intro{
+.intro {
   width: 100vw;
-  position:absolute;
+  position: absolute;
   top: 0;
   opacity: 0;
   transition: all ease-in 900ms 100ms;
 }
 
-.intro > img{
+.intro > img {
   width: 100%;
   height: 100vh;
 }
 
-.intro[data-active]{
+.intro[data-active] {
   opacity: 1;
   transition: all 900ms 0ms;
 }
 
-
-
-.carousel-button{
+.carousel-button {
   position: absolute;
   top: 50%;
   z-index: 20;
@@ -158,67 +156,73 @@ header > img{
   cursor: pointer;
 }
 
-.carousel-button[data-carousel = "prev"]{
+.carousel-button[data-carousel="prev"] {
   left: 1rem;
 }
 
-.carousel-button[data-carousel = "next"]{
+.carousel-button[data-carousel="next"] {
   right: 1rem;
 }
 
-.events-hero{  
+.events-hero {
   display: flex;
   width: 100vw;
   height: 190px;
-  background-color:  #f23a2e ;
+  background-color: #f23a2e;
   align-items: center;
   justify-content: center;
   gap: 7rem;
 }
 
-.highlight{
-  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.highlight {
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   font-size: 12px;
   padding: 7px 10px;
   color: #fff;
   display: inline-block;
-  background-color: #eec60a 
+  background-color: #eec60a;
 }
 
-.highlight p{
+.highlight p {
   margin: 0.5rem;
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
 }
 
-.events-head{
-  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+.events-head {
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   font-size: 12px;
   padding: 7px 10px;
   color: #fff;
   display: inline-block;
 }
 
-.mid-container{
+.mid-container {
   width: 100vw;
   text-align: center;
+  padding: 32px 1px;
+  margin-top: 12px;
 }
 
-.bishop-container{
-  width: 100%;  
+.bishop-container {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 12px 23px;
-  background-color: #f8f9fa
+  background-color: #f8f9fa;
 }
 
-.bishop-pic{
+.bishop-pic {
   min-width: 200px;
   height: 100%;
   position: relative;
@@ -226,39 +230,41 @@ header > img{
   border: 1px solid;
 }
 
-.bishop-pic img{
+.bishop-pic img {
   width: 100%;
 }
 
-.mid-header{
+.mid-header {
   color: rgba(0, 0, 0, 0.796);
 }
 
-.bishop-words{
+.bishop-words {
   padding: 10px 12px;
 }
 
-.bishop-wrds{
+.bishop-wrds {
   margin: 3rem 2rem;
-  margin:7px 12px;
+  margin: 7px 12px;
   text-align: start;
   color: rgba(0, 0, 0, 0.5);
-  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.bishop-name{
+.bishop-name {
   display: flex;
   justify-content: flex-end;
 }
 
-.arch-title{
+.arch-title {
   font-weight: bold;
   font-size: 2rem;
   color: rgb(42, 47, 52);
   text-align: center;
 }
 
-.archdeaconaries-container{
+.archdeaconaries-container {
   width: 100vw;
   background-color: #ffffff00;
   display: flex;
@@ -266,60 +272,59 @@ header > img{
   align-items: center;
 }
 
-
-.arch-grid{
+.arch-grid {
   width: 90vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 23px;    
+  gap: 23px;
   padding-bottom: 23px;
 }
 
-.arch{
-position: relative;
-min-width: 100px;
+.arch {
+  position: relative;
+  min-width: 100px;
 }
 
-.arch img{
-width: 100%;
+.arch img {
+  width: 100%;
 }
 
-.arch-name{
-position: absolute;
-top: 0;
-left: o;
-height: 100%;
-width: 100%;
-opacity: 0;   
-transition: all ease-in-out 1s;
+.arch-name {
+  position: absolute;
+  top: 0;
+  left: o;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all ease-in-out 1s;
 }
 
-.arch:hover .arch-name{
-opacity: 1;
+.arch:hover .arch-name {
+  opacity: 1;
 }
 
-.arch-in{
-height: 100%;
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: rgba(0, 0, 0, 0.582);
-font-size: 34px;
-font-weight: bold;
-color: aliceblue;
+.arch-in {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.582);
+  font-size: 34px;
+  font-weight: bold;
+  color: aliceblue;
 }
 
-.thissection{
+.thissection {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color:#739284c8;
+  background-color: #739284c8;
   width: 100vw;
   height: 400px;
 }
 
-.section-words{
+.section-words {
   text-transform: uppercase;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -329,30 +334,28 @@ color: aliceblue;
   color: #fff;
 }
 
-.dept-holder{
+.dept-holder {
   width: 89vw;
 }
 
-.dept-grid{
+.dept-grid {
   display: flex;
-  
+
   padding: 12px;
 }
 
-.dept-container{
+.dept-container {
   width: 100%;
   position: relative;
 }
 
-.dept-container > img{
+.dept-container > img {
   width: 100%;
   height: 100%;
   object-fit: fill;
-
-
 }
 
-.overlay-dept{
+.overlay-dept {
   position: absolute;
   top: 0;
   width: 100%;
@@ -366,42 +369,39 @@ color: aliceblue;
   transition: all ease-in-out 700ms;
 }
 
-.overlay-dept:hover{
+.overlay-dept:hover {
   background-color: #100c13b4;
 }
 
-.overlay-dept:hover .overlay{
+.overlay-dept:hover .overlay {
   transform: scale(1);
 }
 
-.overlay{
+.overlay {
   transform: scale(0);
   transition: all ease-in 700ms;
   color: #fff;
-
 }
 
-.overlay-dept img{
+.overlay-dept img {
   position: absolute;
   top: 0;
   left: 0;
   width: 30px;
 }
 
-
-
-footer{
+footer {
   width: 100vw;
   position: relative;
 }
 
-footer img{
+footer img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
 
-.overlay-footer{
+.overlay-footer {
   position: absolute;
   top: 0;
   width: 100%;
@@ -414,40 +414,40 @@ footer img{
   color: #fff;
 }
 
-.overlay-footer a{
+.overlay-footer a {
   color: #fff;
 }
 
-.footer-holder{
+.footer-holder {
   display: flex;
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  padding: 12px;  
+  padding: 12px;
 }
 
-.footer-container{
+.footer-container {
   width: 100%;
   border: 1px solid;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:1rem;
+  padding: 1rem;
 }
 
-#about-us button{
+#about-us button {
   height: 32px;
   padding: 12px;
   text-align: center;
   display: flex;
   align-items: center;
   outline: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   border-radius: 42px;
 }
 
-.discover{
+.discover {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -457,20 +457,20 @@ footer img{
   background-color: aliceblue;
 }
 
-.discover h2{
+.discover h2 {
   font-size: 62px;
   font-weight: 400;
 }
 
-.discover-more{
+.discover-more {
   display: flex;
   align-items: center;
   gap: 300px;
   background-color: aliceblue;
 }
 
-.discover-holders, 
-.discover-holders a{
+.discover-holders,
+.discover-holders a {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -478,7 +478,7 @@ footer img{
   cursor: pointer;
 }
 
-.discover-holders img{
+.discover-holders img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -486,7 +486,7 @@ footer img{
   object-position: center;
 }
 
-.discover-holders span{
+.discover-holders span {
   font-size: 18px;
   color: #332a2a;
 }

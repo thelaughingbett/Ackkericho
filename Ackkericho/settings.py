@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#ps4x9^$=pv19accm9*c)%198bo43v1%!*4j=75s9shwa$9a8-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
+
     'base.apps.BaseConfig'
 ]
 
@@ -57,8 +57,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-             BASE_DIR / 'templates'
-            ],
+            BASE_DIR / 'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +70,9 @@ TEMPLATES = [
         },
     },
 ]
+
+# api/wsgi.py
+# app = get_wsgi_application()
 
 WSGI_APPLICATION = 'Ackkericho.wsgi.application'
 

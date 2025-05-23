@@ -1,14 +1,15 @@
   {% extends "main.html" %}
-  {% block main %}
-    
-  
+  {% block head %}
   {% load static %}
-  <link rel="stylesheet" href="{% static 'styles/cathedral.css' %}">
+   <link rel="stylesheet" href="{% static 'styles/cathedral.css' %}">
   <link rel="stylesheet" href="{% static 'styles/newmobile.css' %}">
   <script src="https://kit.fontawesome.com/f58d60dffb.js" crossorigin="anonymous"></script>
   <script src="{% static 'scripts/universal.js' %}" defer></script>
   <title>cathedral kericho</title>
-</head>
+
+  {% endblock %}
+  {% block main %}
+  
 <body>
   <header>
     <div class="holy-trinity">
@@ -86,7 +87,8 @@
       </div>
     </div>
 
-    <div class="cathedral-events">
+    {% if upcoming.EventName %}
+        <div class="cathedral-events">
       <span><h2>UPCOMING EVENTS</h2></span>
       <div class="events-fold">
         <div class="events-con">
@@ -126,6 +128,9 @@
         
       </div>
     </div>
+    {% endif %}
+
+
 
     <div class="more-about-anglican">
       <div class="the-words">
@@ -235,7 +240,7 @@
         const clickable = dropDown.querySelector('.added')
         clickable.toggleAttribute('data-active')
         dropDown.querySelector('.fa-chevron-down').toggleAttribute('data-active')
-        console.log(dropDown.querySelector('.fa-chevron-down'))
+        //console.log(dropDown.querySelector('.fa-chevron-down'))
       })
     })
 

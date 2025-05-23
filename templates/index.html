@@ -1,17 +1,18 @@
   {% extends "main.html" %}
 
-  {% block main %}
+  {% block head %}
   {% load static %}
   <link rel="stylesheet" href="{% static 'styles/newinterface.css' %}">
-  
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="{% static 'styles/newmobile.css'%}">
   <script src="https://kit.fontawesome.com/f58d60dffb.js" crossorigin="anonymous"></script>
   <script src="{% static 'scripts/universal.js' %}" defer></script>
   
   <title>ACK kericho Diocese</title>
-</head>
-<body>
+  {% endblock  %}
+
+  {% block main %}
+  <body>
   <header class="active-header">
     <img src="{% static 'assets/images/kericho.png' %}" alt="">
     
@@ -49,11 +50,13 @@
         Clergy
       </a>
     </div>
-    <div class="context-items clickable">
-     <a href="{% url 'events' %}">
-      Events
-     </a>
-    </div>
+    {% if upcoming.EventName %}
+      <div class="context-items clickable">
+        <a href="{% url 'events' %}">
+          Events
+        </a>
+      </div>
+    {% endif %}
     <div class="context-items clickable">
       <a href="#facilities">
         Facilities
@@ -119,8 +122,11 @@
         </div>
       </div>
     </section>
+
     <section>
-      <div class="events-hero">
+
+      {% if upcoming.EventName %}
+        <div class="events-hero">
         <div class="exp">
           <div class="highlight">
             UPCOMING EVENT
@@ -137,7 +143,9 @@
             on {{upcoming.Date}}
           </div>
         </div>    
-      </div>
+        </div>
+      {% endif%}
+     
 
       <div class="mid-container">
         <div class="bishop-container">
@@ -147,7 +155,7 @@
           <div class="bishop-words">
             <span class="mid-header"> FROM THE BISHOP</span>
             <span class="bishop-wrds">
-              <br>
+             <br>
               I greet you all in the Name of Jesus Christ thank God for this day and for the privilege to be a servant of God in His church. The Anglican Communion is a family of 42 autonomous and independent-yet-interdependent national, pan-national and regional churches in communion with the see of Canterbury.The diocese of Kericho being  adipisci perferendis suscipit nihil expedita laborum inventore sapiente alias reiciendis quos illo aut dolorum molestiae possimus. Itaque aliquam rem omnis aut quo quidem porro facere culpa, unde autem. Quasi alias magni aperiam totam!
             </span>
             <br>
@@ -284,20 +292,19 @@
 
             <div class="dept-container">
               <img src="{% static 'assets/images/sundayschool.avif' %}" alt="">
-             <a href="{% url 'sschool' %}">
-              <div class="overlay-dept">
-                <img src="{% static 'assets/images/sundayschool.jpg' %}" alt="">
-               <div class="overlay">
-                SUNDAY SCHOOL
-               </div>
-              </div>
-             </a>
+              <a href="{% url 'sschool' %}">
+                <div class="overlay-dept">
+                  <img src="{% static 'assets/images/sundayschool.jpg' %}" alt="">
+                <div class="overlay">
+                  SUNDAY SCHOOL
+                </div>
+                </div>
+              </a>
             </div>
 
           </div>
         </div>
-      </div>
-      
+      </div>      
     </section>
 
     {% include "newtochurch.html" %}
@@ -416,4 +423,3 @@
 
 </body>
 {% endblock main %}
-<!-- </html> -->

@@ -1,33 +1,33 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-header{
+header {
   display: flex;
   position: fixed;
   width: 100vw;
   justify-content: stretch;
   align-items: baseline;
-  background-color: #fff ;
+  background-color: #fff;
 }
 
-.holy-trinity{
-  background-color: rgba(42, 10, 10, 0.995) ;
+.holy-trinity {
+  background-color: rgba(42, 10, 10, 0.995);
   font-size: 2rem;
-  height: 97PX;
+  height: 97px;
   display: flex;
   align-items: center;
   color: #fff;
   padding: 2px 12px;
 }
-.hero{
+.hero {
   display: flex;
   justify-content: space-between;
   flex: 1;
@@ -36,26 +36,22 @@ header{
   cursor: pointer;
 }
 
-.hero ul{
+.hero ul {
   display: flex;
   list-style-type: none;
   gap: 10px;
-  align-items:center ;
+  align-items: center;
   justify-content: flex-start;
 }
 
-
-
-.socials ul{
+.socials ul {
   display: flex;
   list-style-type: none;
   gap: 10px;
-  align-items:center ;
+  align-items: center;
   justify-content: center;
   justify-self: flex-end;
 }
-
-
 
 .added {
   flex-direction: column;
@@ -68,28 +64,28 @@ header{
   padding: 2rem;
 }
 
-.added  li{
+.added li {
   transform: scale(0);
 }
 
-.added[data-active]{
+.added[data-active] {
   height: inherit;
   transform: scale(1);
 }
 
-.added[data-active] li{
+.added[data-active] li {
   transform: scale(1);
 }
 
-.fa-chevron-down[active]{
+.fa-chevron-down[active] {
   transform: rotate(180deg);
   transition: all ease-in 300ms 300ms;
 }
 
-.cathedral-banner{
+.cathedral-banner {
   width: 100vw;
   height: 100vh;
-  background-image: url('../assets/images/allsaints.JPG');
+  background-image: url("../assets/images/allsaints.JPG");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -98,7 +94,7 @@ header{
   z-index: -20;
 }
 
-.cathedral-dimmer{
+.cathedral-dimmer {
   position: absolute;
   top: 0;
   width: 100%;
@@ -109,14 +105,14 @@ header{
   justify-content: space-around;
 }
 
-.banner-intro ,
-.banner-int{
+.banner-intro,
+.banner-int {
   text-transform: uppercase;
   color: #fff;
-  font:300 sans-serif;
+  font: 300 sans-serif;
 }
 
-.banner-int{
+.banner-int {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,20 +122,20 @@ header{
   font-size: 1rem;
   width: 43vw;
   height: 34vh;
-  background-color:#FFFFFF;
+  background-color: #ffffff;
   color: black;
 }
 
-.banner-int h2{
-  font-weight:bold;
+.banner-int h2 {
+  font-weight: bold;
   font: 2em sans-serif;
 }
 
-.banner-intro h2{
+.banner-intro h2 {
   font-size: 3rem;
 }
 
-.welcoming-message{
+.welcoming-message {
   width: 100vw;
   height: 70vh;
   display: flex;
@@ -148,7 +144,7 @@ header{
   flex-direction: column;
 }
 
-.holder-welcome{
+.holder-welcome {
   width: 64vw;
   display: flex;
   align-items: center;
@@ -157,16 +153,16 @@ header{
   gap: 56px;
 }
 
-.holder-welcome span{
+.holder-welcome span {
   font-size: 1rem;
 }
 
-.holder-welcome p{
+.holder-welcome p {
   font-size: 2rem;
   color: rgba(49, 47, 47, 0.674);
 }
 
-.holder-welcome button{
+.holder-welcome button {
   width: 200px;
   height: 67px;
   background-color: rgb(150, 150, 55);
@@ -175,96 +171,97 @@ header{
   outline: none;
 }
 
-.cathedral-events h2{
-  color: #FFFFFF;
+.cathedral-events h2 {
+  color: #ffffff;
 }
 
-.events-con{
+.events-con {
   display: flex;
   gap: 32px;
   flex-grow: 1;
 }
 
-.date{
+.date {
   text-align: center;
 }
 
-.month{
+.month {
   text-transform: uppercase;
   font-size: 13px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.day{
+.day {
   font-size: 42px;
 }
 
-.events-fold{
+.events-fold {
   display: flex;
   flex-wrap: wrap;
   gap: 34px;
 }
 
-.event{
-  color: #FFFFFF;
+.event {
+  color: #ffffff;
   text-transform: uppercase;
 }
 
-.events-con{
+.events-con {
   font-size: 24px;
 }
 
-.cathedral-events{
+.cathedral-events {
   width: 100vw;
   align-items: center;
   height: 46vh;
   gap: 78px;
 }
 
-.cathedral-events>span{
+.cathedral-events > span {
   font-size: 42px;
 }
 
-.cathedral-events,.date,.event{
+.cathedral-events,
+.date,
+.event {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #A8744F;
+  background-color: #a8744f;
 }
 
-.more-about-anglican{
+.more-about-anglican {
   display: flex;
-  
 }
 
-.holt{
+.holt {
   flex-grow: 1;
 }
 
-.holt img{
+.holt img {
   width: 100%;
   object-fit: cover;
 }
 
-.inner-holder span{
+.inner-holder span {
   font-size: 14px;
 }
 
-.inner-holder h2{
+.inner-holder h2 {
   font-size: 62px;
 }
 
-.inner-holder p{
+.inner-holder p {
   font-size: 18px;
 }
 
-.the-words{
+.the-words {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.inner-holder{
+.inner-holder {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -273,24 +270,24 @@ header{
   padding: 2rem;
 }
 
-.inner-holder button{
+.inner-holder button {
   width: 300px;
   border: none;
   outline: none;
-  background-color: #F1B253;
+  background-color: #f1b253;
   align-self: flex-start;
   transition: all ease 500ms;
   padding: 12px 7px;
   color: #222222;
 }
 
-.inner-holder button:hover{
-  background-color: #22254D;
-  color: #FFFFFF;
+.inner-holder button:hover {
+  background-color: #22254d;
+  color: #ffffff;
 }
 
-.another-section{
-  background-color: #343E77;
+.another-section {
+  background-color: #343e77;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -298,91 +295,88 @@ header{
   padding: 3rem 23px;
 }
 
-.provost-img{
- width: 640px;
+.provost-img {
+  width: 640px;
 }
 
-.provost-img img{
+.provost-img img {
   width: 100%;
- 
 }
 
-.the-other{
-  color:#FFFFFF;
+.the-other {
+  color: #ffffff;
   width: 56vw;
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.the-other span{
+.the-other span {
   font-size: 14px;
   align-self: center;
 }
 
-.the-other h2{
+.the-other h2 {
   font-size: 62px;
 }
 
-.the-other p{
+.the-other p {
   font-size: 18px;
 }
 
-.map{
+.map {
   width: 100vw;
 }
 
-.map iframe{
+.map iframe {
   display: none;
   width: 100%;
   outline: none;
   border: none;
 }
 
-.map iframe[data-active]{
+.map iframe[data-active] {
   display: block;
 }
 
-footer{
+footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
   background-color: #222222;
-  color: #FFFFFF99;
+  color: #ffffff99;
   font-size: 18px;
   padding: 97px 40px;
 }
 
-footer h2{
-  color: #FFFFFF;
+footer h2 {
+  color: #ffffff;
   font-size: 28px;
   margin-bottom: 12px;
 }
 
-footer .fa{
+footer .fa {
   font-size: 18px;
 }
 
-footer ul li a{
-  color: #FFFFFF99;
+footer ul li a {
+  color: #ffffff99;
 }
 
-footer p{
+footer p {
   cursor: pointer;
 }
 
-.footer-elements{
+.footer-elements {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-
-@media(max-width: 772px) {
-  footer{
+@media (max-width: 772px) {
+  footer {
     align-items: start;
     flex-wrap: wrap;
     gap: 23px;
   }
 }
-

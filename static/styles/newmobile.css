@@ -1,5 +1,27 @@
-@media(max-width:772px){
-  .context-menu{
+@media (max-width: 820px) {
+  .faq-holder {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .events-hero {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .bishop-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discover-more {
+    gap: 72px;
+  }
+}
+
+@media (max-width: 772px) {
+  .context-menu {
     width: 78vw;
     min-height: 100vh;
     transform: translateX(78vw);
@@ -7,142 +29,142 @@
     font: 1em sans-serif;
   }
 
-  .carousel{
+  .carousel {
     height: 67vh;
   }
 
-  .carousel-button{
+  .carousel-button {
     background-color: transparent;
     font-size: 2rem;
   }
-  .intro{
+
+  .intro {
     height: 67vh;
   }
 
-  .intro img{
+  .intro img {
     height: 67vh;
     object-fit: fill;
   }
 
-  .intro h2{
+  .intro h2 {
     font-size: 1rem;
   }
 
-  .intro p{
+  .intro p {
     font-size: 1rem;
   }
 
-  .exp{
+  .exp {
     padding: 10px;
   }
 
-  .bishop-container{
-    display: block;
-    width: 100vw;
+  .bishop-container {
+    display: flex;
+    flex-direction: column;
   }
 
-  .bishop-pic{
+  .bishop-pic {
     float: left;
     margin: 7px;
   }
 
-  .bishop-pic>img{
+  .bishop-pic > img {
     width: 240px;
   }
 
-  .archdeaconaries-container{
+  .archdeaconaries-container {
     width: 100vw;
   }
-  
-  .arch-title{
+
+  .arch-title {
     font-size: 1rem;
     margin-bottom: 12px;
   }
 
-  .arch-grid{
+  .arch-grid {
     grid-template-columns: 1fr;
     width: 98vw;
     gap: 34px;
-    justify-items:center;
+    justify-items: center;
     align-items: center;
   }
 
-  .arch{
+  .arch {
     width: 80%;
     height: inherit;
   }
 
-  .arch > img{
+  .arch > img {
     width: 100%;
   }
 
-  .arch-name{
-    opacity: .8;
+  .arch-name {
+    opacity: 0.8;
   }
 
-  .verse-of img{
+  .verse-of img {
     height: 300px;
     object-fit: cover;
   }
 
-  .verse-of .background-dimmer .background-words p{
+  .verse-of .background-dimmer .background-words p {
     font-size: 1rem;
   }
 
-  .verse-of .background-dimmer .background-words h2{
+  .verse-of .background-dimmer .background-words h2 {
     font-size: 1rem;
   }
 
-  .thissection{
+  .thissection {
     height: inherit;
   }
 
-  .section-words{
+  .section-words {
     font-size: 1rem;
   }
 
-  .dept-grid{
+  .dept-grid {
     flex-direction: column;
-
   }
 
-  .overlay-dept{
+  .overlay-dept {
     background-color: #100c13b4;
   }
-  
-  .overlay{
+
+  .overlay {
     transform: scale(1);
-    opacity: .7;
+    opacity: 0.7;
   }
 
-  footer{
+  footer {
     height: inherit;
   }
 
-  footer img{
+  footer img {
     height: 87vh;
     object-fit: cover;
     object-position: center;
   }
 
-  .footer-holder{
+  .footer-holder {
     flex-direction: column;
     padding: 12% 7px;
     justify-content: center;
   }
 
-  .hashbar-container{
+  .hashbar-container {
     display: block;
     position: absolute;
     align-self: center;
     right: 0;
   }
 
-  .holy-trinity{
-    font-size: .7rem;
+  .holy-trinity {
+    font-size: 0.7rem;
   }
 
-  .hero{
+  .hero {
     position: absolute;
     width: 100vw;
     top: 97px;
@@ -155,18 +177,18 @@
     height: 0;
   }
 
-  .hero[data-active]{
+  .hero[data-active] {
     transform: translate(-50%, 0);
     height: inherit;
   }
 
-  .hero ul{
+  .hero ul {
     flex-direction: column;
     font-size: 1rem;
     margin: 7px;
   }
 
-  .socials ul{
+  .socials ul {
     flex-direction: row;
   }
 
@@ -177,165 +199,168 @@
     padding: 9px;
   }
 
-  .added  li{
-    font-size: .9rem;
+  .added li {
+    font-size: 0.9rem;
     transform: scale(0);
   }
 
-  .added[data-active]{
-   
+  .added[data-active] {
     display: block;
     transform: scale(1);
   }
 
-  .added[data-active] li{
+  .added[data-active] li {
     height: inherit;
     transform: scale(1);
   }
 
-  .fa-chevron-down[active]{
+  .fa-chevron-down[active] {
     transform: rotate(180deg);
     transition: all ease-in 300ms 300ms;
   }
 
-  .cathedral-dimmer{
+  .cathedral-dimmer {
     flex-direction: column;
     justify-content: center;
     gap: 23px;
   }
 
-  .banner-int{
+  .banner-int {
     width: 45vw;
     gap: 12px;
   }
 
-  .banner-int h2{
-    font: .6em sans-serif;
+  .banner-int h2 {
+    font: 0.6em sans-serif;
   }
-  
-  .banner-intro h2{
+
+  .banner-intro h2 {
     font-size: 1.9em;
     text-align: center;
   }
 
-  .welcoming-message{
+  .welcoming-message {
     height: inherit;
   }
 
-  .holder-welcome{
+  .holder-welcome {
     padding: 56px 7px;
-
   }
 
-  .holder-welcome p{
+  .holder-welcome p {
     font-size: 1em;
   }
- 
-  .cathedral-events{
+
+  .cathedral-events {
     height: inherit;
     padding: 37px 23px;
   }
 
-  .time,.events-con,.month,.day{
-    font-size: .9em;
+  .time,
+  .events-con,
+  .month,
+  .day {
+    font-size: 0.9em;
   }
 
-  .cathedral-events>span{
+  .cathedral-events > span {
     font-size: 1em;
   }
 
-  .more-about-anglican{
-    flex-wrap: wrap;    
-  }
-
-  .inner-holder button{
-    width: 100px;
-    font-size: .5em;
-  }
-
-  .another-section{
-    flex-wrap: wrap-reverse;
-  }
-
-  .the-other h2,.inner-holder h2{
-    font-size: 1rem;
-  }
-
-  .the-other p,.inner-holder p{
-    font-size: .6rem;
-  }
-
-  .faq-holder{
+  .more-about-anglican {
     flex-wrap: wrap;
   }
 
-  .left-faq{
-    padding: 40px ;
+  .inner-holder button {
+    width: 100px;
+    font-size: 0.5em;
   }
 
-  .right-faq{
+  .another-section {
+    flex-wrap: wrap-reverse;
+  }
+
+  .the-other h2,
+  .inner-holder h2 {
+    font-size: 1rem;
+  }
+
+  .the-other p,
+  .inner-holder p {
+    font-size: 0.6rem;
+  }
+
+  .faq-holder {
+    flex-direction: column;
+  }
+
+  .left-faq {
+    padding: 40px;
+  }
+
+  .right-faq {
     width: 100vw;
     font-size: 1rem;
   }
 
-  .right-faq ul li p{
+  .right-faq ul li p {
     font-size: 1rem;
   }
 
-  .archdeacons-message{
+  .archdeacons-message {
     flex-wrap: wrap;
     padding: 130px 13px;
     gap: 23px;
   }
 
-  .archdeacons-message img{
+  .archdeacons-message img {
     justify-self: center;
     margin-top: 12px;
     width: 300px;
     align-self: center;
   }
 
-  .message{
+  .message {
     height: inherit;
     width: 78vw;
     padding: 12px 20px;
     gap: 10px;
   }
 
-  .message span{
-    font:  .9rem;
+  .message span {
+    font: 0.9rem;
   }
 
-  .message h2{
+  .message h2 {
     font-size: 1rem;
   }
 
-  .message p{
+  .message p {
     width: 54vw;
-    font-size: .7rem;
-    justify-self: center
+    font-size: 0.7rem;
+    justify-self: center;
   }
 
-  .messag{
+  .messag {
     width: 100vw;
     flex-wrap: wrap;
-    padding: 0  10px 10px 34px;
+    padding: 0 10px 10px 34px;
     gap: 20px;
   }
 
-  .messag img{
+  .messag img {
     width: 300px;
   }
 
-  .themessage{
+  .themessage {
     width: 100vw;
   }
 
-  .themessage h2{
-    font-size: 2rem;    
+  .themessage h2 {
+    font-size: 2rem;
   }
 
-  .themessage p{
+  .themessage p {
     padding-bottom: 12px;
     font-size: 1rem;
   }
@@ -344,41 +369,41 @@
     padding-left: 23px;
   }
 
-  .short h2{
+  .short h2 {
     font-size: 2rem;
   }
 
-  .short ul{
-    font-size: .8rem;
+  .short ul {
+    font-size: 0.8rem;
     flex-direction: column;
     gap: 12px;
     align-self: center;
   }
 
-  .short li{
+  .short li {
     border-right: none;
     border-bottom: 1px solid rgba(49, 47, 47, 0.674);
     padding: 12px 6px;
   }
 
-  .discover-more{
+  .discover-more {
     flex-direction: column;
     gap: 34px;
   }
 
-  .upper-section{
+  .upper-section {
     height: 100px;
   }
 
-  .upper-section h2{
+  .upper-section h2 {
     font-size: 1.5rem;
   }
 
-  .upper-section p{
-    font-size: .9rem;
+  .upper-section p {
+    font-size: 0.9rem;
   }
 
-  .introd{
+  .introd {
     flex-wrap: wrap;
     gap: 23px;
     padding: 1rem;
@@ -388,12 +413,12 @@
     height: 400px;
   }
 
-  .introd .img-section .verse{
+  .introd .img-section .verse {
     right: 0;
     bottom: 0;
   }
 
-  .introd .img-section .verse p{
+  .introd .img-section .verse p {
     font-size: 1rem;
   }
 
@@ -401,7 +426,7 @@
     padding: 2rem;
   }
 
-  .sect{
+  .sect {
     width: 100vw;
     height: 100px;
     display: flex;

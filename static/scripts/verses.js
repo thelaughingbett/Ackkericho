@@ -13,11 +13,11 @@ const verses = [
   },
   {
     verse: "psalms 127:1",
-    cont: "If the Lord does not build the house, the work of the builders is useless; if the lord does not protect the city,it is uselless foor the sentries to stand guard"
+    cont: "If the Lord does not build the house, the work of the builders is useless; if the lord does not protect the city,it is useless for the sentries to stand guard"
   },
   {
     verse: "john 4:13-14",
-    cont: "jesus answered, 'All those who driink this water will be thirsty again,but whoever drinks the water that I will give him will never be thirsty"
+    cont: "jesus answered, 'All those who drink this water will be thirsty again,but whoever drinks the water that I will give him will never be thirsty"
   },
   {
     verse: "Deutoronomy 11:13-21",
@@ -28,7 +28,7 @@ const verses = [
     cont: "Do not let all kinds of teachings lead you away from the right way. It is good to recieve inner strength from God's grace,and not obeying rules about foods;those who obey these rules have not been helped by them "
   },
   {
-    verse: "John 1:1o-18",
+    verse: "John 1:10-18",
     cont: "The word was in the world,and though God made the world through him,yet the world the world did not recognize him ,v11  he came to his own country ,but his own people did not receive , v12 Some ,however, did recieve him and believed in him; so he gave them the right to be God's children"
   },
   {
